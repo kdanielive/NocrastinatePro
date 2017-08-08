@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732628521F39A31100ADA745 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732628511F39A31100ADA745 /* CustomCell.swift */; };
 		733A16AE1F399DFF001C913E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A16AD1F399DFF001C913E /* AppDelegate.swift */; };
 		733A16B01F399DFF001C913E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A16AF1F399DFF001C913E /* ViewController.swift */; };
 		733A16B31F399DFF001C913E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733A16B11F399DFF001C913E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2748630C53121E97EA9D6F1F /* Pods_NocrastinatePro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NocrastinatePro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		732628511F39A31100ADA745 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		733A16AA1F399DFF001C913E /* NocrastinatePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NocrastinatePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733A16AD1F399DFF001C913E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733A16AF1F399DFF001C913E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				733A16AD1F399DFF001C913E /* AppDelegate.swift */,
 				733A16AF1F399DFF001C913E /* ViewController.swift */,
 				733A16B11F399DFF001C913E /* Main.storyboard */,
+				732628511F39A31100ADA745 /* CustomCell.swift */,
 				733A16B71F399DFF001C913E /* Assets.xcassets */,
 				733A16B91F399DFF001C913E /* LaunchScreen.storyboard */,
 				733A16BC1F399DFF001C913E /* Info.plist */,
@@ -342,6 +345,7 @@
 			files = (
 				733A16B61F399DFF001C913E /* NocrastinatePro.xcdatamodeld in Sources */,
 				733A16B01F399DFF001C913E /* ViewController.swift in Sources */,
+				732628521F39A31100ADA745 /* CustomCell.swift in Sources */,
 				733A16AE1F399DFF001C913E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +601,7 @@
 				733A16D71F399DFF001C913E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		733A16D81F399DFF001C913E /* Build configuration list for PBXNativeTarget "NocrastinateProTests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +610,7 @@
 				733A16DA1F399DFF001C913E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		733A16DB1F399DFF001C913E /* Build configuration list for PBXNativeTarget "NocrastinateProUITests" */ = {
 			isa = XCConfigurationList;
@@ -613,6 +619,7 @@
 				733A16DD1F399DFF001C913E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
