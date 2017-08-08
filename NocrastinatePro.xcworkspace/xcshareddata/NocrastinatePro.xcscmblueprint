@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AD75513E7F3D508EAA38B552E03AA0F13EAE7EA8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AD75513E7F3D508EAA38B552E03AA0F13EAE7EA8" : 9223372036854775807,
+    "CBF3DE85F99FE9E388684DBB08B46A385BCCF5EC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0177DFC9-B57F-4B95-9A41-ADF9C9B5BE3B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AD75513E7F3D508EAA38B552E03AA0F13EAE7EA8" : "NocrastinatePro\/",
+    "CBF3DE85F99FE9E388684DBB08B46A385BCCF5EC" : "LifeAssistant\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NocrastinatePro",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NocrastinatePro.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kdanielive\/NocrastinatePro.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD75513E7F3D508EAA38B552E03AA0F13EAE7EA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kdanielive\/TenThousandHours.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CBF3DE85F99FE9E388684DBB08B46A385BCCF5EC"
+    }
+  ]
+}

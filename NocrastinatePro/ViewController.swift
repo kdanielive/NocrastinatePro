@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calendarView.scrollToDate( Date() )
+        
         setupCalendarView()
         // Do any additional setup after loading the view, typically from a nib.
     }
