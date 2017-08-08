@@ -1,0 +1,6 @@
+framework module Pods_NocrastinatePro {
+  umbrella header "Pods-NocrastinatePro-umbrella.h"
+
+  export *
+  module * { export * }
+}
