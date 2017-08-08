@@ -40,7 +40,12 @@ class ViewController: UIViewController {
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CustomCell else { return }
         
-        if cellState.dateBelongsTo == .thisMonth {
+        let today = Date()
+        let cellDate = cellState.date
+        formatter.dateFormat = "yyyy MM dd"
+        if(formatter.string(from: today) == formatter.string(from: cellDate)) {
+            validCell.dateLabel.textColor = UIColor.red
+        } else if cellState.dateBelongsTo == .thisMonth {
             validCell.dateLabel.textColor = UIColor.white
         } else {
             validCell.dateLabel.textColor = UIColor.gray
