@@ -9,10 +9,14 @@
 import UIKit
 
 class ModifierTableViewController: UITableViewController {
+    
+    @IBOutlet weak var doneButton: UIButton!
+    var eventDict = [Int:String]()
+    var scheduleDict = [Int:String]()
+    var durationDict = [Int:String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         tableView.allowsSelection = false
 
@@ -52,12 +56,36 @@ class ModifierTableViewController: UITableViewController {
         // dividing cases
         if(section == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
+            cell.eventTextField.tag = row
+            cell.eventTextField.addTarget(self, action: #selector(addEventToArray(_:)), for: UIControlEvents.editingDidEnd)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
+            cell.itemTextField.tag = row
+            cell.itemDurationTextField.tag = row
+            cell.itemTextField.addTarget(self, action: #selector(addScheduleToArray(_:)), for: .editingDidEnd)
+            cell.itemDurationTextField.addTarget(self, action: #selector(addDurationToArray(_:)), for: .editingDidEnd)
             return cell
         }
         // Configure the cell...
+    }
+    
+    func addEventToArray(_ sender: UITextField) {
+        let event = sender.text
+        let row = sender.tag
+        eventDict[row] = event
+    }
+    
+    func addScheduleToArray(_ sender: UITextField) {
+        let schedule = sender.text
+        let row = sender.tag
+        scheduleDict[row] = schedule
+    }
+    
+    func addDurationToArray(_ sender: UITextField) {
+        let duration = sender.text
+        let row = sender.tag
+        scheduleDict[row] = duration
     }
 
     /*
