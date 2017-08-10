@@ -96,8 +96,6 @@ class EmbeddedTableViewController: UITableViewController {
             }
         }
         
-        
-        
         // Configure the cell...
 
         return cell
