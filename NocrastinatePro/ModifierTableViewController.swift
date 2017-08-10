@@ -81,7 +81,7 @@ class ModifierTableViewController: UITableViewController {
     func addEventToArray(_ sender: UITextField) {
         let event = sender.text
         let row = sender.tag
-        eventDict[row] = event
+        
     }
     
     func addScheduleToArray(_ sender: UITextField) {

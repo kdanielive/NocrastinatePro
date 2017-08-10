@@ -10,6 +10,7 @@ import UIKit
 
 class ModifierTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var eventTimeTextField: UITextField!
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var itemDurationTextField: UITextField!
     @IBOutlet weak var eventTextField: UITextField!
