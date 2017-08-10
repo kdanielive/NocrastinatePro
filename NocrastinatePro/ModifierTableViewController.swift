@@ -111,6 +111,8 @@ class ModifierTableViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
         cell.eventTextField.text = ""
         cell.eventTimeTextField.text = ""
+        
+        self.tableView.reloadData()
     }
     
     @IBAction func addToSchedule(_ sender: UIButton) {
@@ -122,6 +124,8 @@ class ModifierTableViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
         cell.itemTextField.text = ""
         cell.itemDurationTextField.text = ""
+        
+        self.tableView.reloadData()
     }
     
     /*

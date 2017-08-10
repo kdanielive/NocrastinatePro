@@ -239,23 +239,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an Event" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-ni-YTH">
-                                            <rect key="frame" x="8" y="8" width="250" height="30"/>
+                                            <rect key="frame" x="8" y="3" width="250" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Start Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QkE-H5-ban">
-                                            <rect key="frame" x="262" y="8" width="105" height="30"/>
+                                            <rect key="frame" x="262" y="3" width="105" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="105" id="eXk-mF-Hkl"/>
+                                                <constraint firstAttribute="width" constant="105" id="LE3-A4-okw"/>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx9-4n-B9C">
-                                            <rect key="frame" x="8" y="46" width="359" height="30"/>
+                                            <rect key="frame" x="8" y="41" width="359" height="30"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Add Event"/>
                                             <connections>
@@ -264,16 +264,15 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QkE-H5-ban" firstAttribute="leading" secondItem="uTZ-ni-YTH" secondAttribute="trailing" constant="4" id="5ET-ef-4OL"/>
-                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="Nx9-4n-B9C" secondAttribute="leading" id="BWo-fk-5H4"/>
-                                        <constraint firstItem="QkE-H5-ban" firstAttribute="trailing" secondItem="HYi-xy-xL9" secondAttribute="trailingMargin" id="L3c-3Z-Jd7"/>
-                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="HYi-xy-xL9" secondAttribute="leadingMargin" id="VAT-DU-6JV"/>
-                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="top" secondItem="QkE-H5-ban" secondAttribute="top" id="VmE-I2-yRZ"/>
-                                        <constraint firstItem="QkE-H5-ban" firstAttribute="trailing" secondItem="Nx9-4n-B9C" secondAttribute="trailing" id="Y78-S8-OGk"/>
-                                        <constraint firstItem="Nx9-4n-B9C" firstAttribute="top" secondItem="uTZ-ni-YTH" secondAttribute="bottom" constant="8" symbolic="YES" id="bEV-oB-Ex7"/>
-                                        <constraint firstItem="Nx9-4n-B9C" firstAttribute="top" secondItem="QkE-H5-ban" secondAttribute="bottom" constant="8" symbolic="YES" id="iGi-5v-rAC"/>
-                                        <constraint firstAttribute="bottom" secondItem="Nx9-4n-B9C" secondAttribute="bottom" constant="4" id="w7u-fH-Kgp"/>
-                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="top" secondItem="HYi-xy-xL9" secondAttribute="topMargin" id="wQb-7o-yJl"/>
+                                        <constraint firstItem="QkE-H5-ban" firstAttribute="trailing" secondItem="HYi-xy-xL9" secondAttribute="trailingMargin" id="TmZ-UY-Utc"/>
+                                        <constraint firstItem="QkE-H5-ban" firstAttribute="trailing" secondItem="Nx9-4n-B9C" secondAttribute="trailing" id="V5W-C8-chJ"/>
+                                        <constraint firstItem="QkE-H5-ban" firstAttribute="leading" secondItem="uTZ-ni-YTH" secondAttribute="trailing" constant="4" id="a6z-I5-dat"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="HYi-xy-xL9" secondAttribute="leadingMargin" id="a7P-q6-KLL"/>
+                                        <constraint firstItem="Nx9-4n-B9C" firstAttribute="top" secondItem="QkE-H5-ban" secondAttribute="bottom" constant="8" symbolic="YES" id="aBS-Sh-FJP"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="Nx9-4n-B9C" secondAttribute="leading" id="bPU-jc-JU1"/>
+                                        <constraint firstItem="Nx9-4n-B9C" firstAttribute="top" secondItem="uTZ-ni-YTH" secondAttribute="bottom" constant="8" symbolic="YES" id="gOz-cd-3vZ"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="top" secondItem="QkE-H5-ban" secondAttribute="top" id="tag-c2-6vw"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="top" secondItem="HYi-xy-xL9" secondAttribute="topMargin" constant="-5" id="w2F-Hg-GQK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.23172486110000001" green="0.30142652440000001" blue="0.34963229299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

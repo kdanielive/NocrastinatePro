@@ -92,33 +92,32 @@ class EmbeddedTableViewController: UITableViewController {
         }
         
         // Sets first row to No events/schedule if there are none
-        if(eventsNum == 0) {
-            if(section == 0) {
+        if(section == 0){
+            if(eventsNum == 0) {
                 cell.itemLabel.text = "No Events"
                 cell.timeLabel.isHidden = true
                 cell.deleteButton.isHidden = true
+            } else {
+                let eventsArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
+                let eventText = eventsArray[row]
+                let startTime = dateManager.defaultter.integer(forKey: "events" + eventText)
+                cell.itemLabel.text = eventsArray[row]
+                cell.timeLabel.text = String(startTime)
             }
-        } else {
-            let eventsArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
-            let eventText = eventsArray[row]
-            let startTime = dateManager.defaultter.integer(forKey: "events" + eventText)
-            cell.itemLabel.text = eventsArray[row]
-            cell.timeLabel.text = String(startTime)
         }
-        if(scheduleNum == 0) {
-            if(section == 1) {
+        if(section == 1) {
+            if(scheduleNum == 0) {
                 cell.itemLabel.text = "No schedule"
                 cell.timeLabel.isHidden = true
                 cell.deleteButton.isHidden = true
+            } else {
+                let scheduleArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule")!
+                let scheduleText = scheduleArray[row]
+                let duration = dateManager.defaultter.integer(forKey: "schedule" + scheduleText)
+                cell.itemLabel.text = scheduleArray[row]
+                cell.timeLabel.text = String(duration)
             }
-        } else {
-            let scheduleArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule")!
-            let scheduleText = scheduleArray[row]
-            let duration = dateManager.defaultter.integer(forKey: "schedule" + scheduleText)
-            cell.itemLabel.text = scheduleArray[row]
-            cell.timeLabel.text = String(duration)
         }
-        
         
         
         // Configure the cell...
