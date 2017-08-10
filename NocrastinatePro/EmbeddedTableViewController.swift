@@ -38,12 +38,14 @@ class EmbeddedTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         let dateKey = dateManager.dateToString()
         if section == 0 {
+            // the key for nsuserdefault object will be "dateKey" + "events"
             if let eventsArray = dateManager.defaultter.array(forKey: dateKey + "events") {
                 return eventsArray.count
             } else {
                 return 1
             }
         } else {
+            // the key for nsuserdefault object will be "dateKey" + "schedule"
             if let scheduleArray = dateManager.defaultter.array(forKey: dateKey + "schedule") {
                 return scheduleArray.count
             } else {
@@ -62,8 +64,9 @@ class EmbeddedTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "embeddedCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "embeddedCell", for: indexPath) as! EmbeddedTableViewCell
 
+        
         // Configure the cell...
 
         return cell
