@@ -22,7 +22,8 @@ class ModifierTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.allowsSelection = false
+        self.tableView.allowsSelection = false
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

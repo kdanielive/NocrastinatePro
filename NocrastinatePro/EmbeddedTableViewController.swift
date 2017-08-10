@@ -14,6 +14,8 @@ class EmbeddedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.allowsSelection = false
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -86,15 +88,31 @@ class EmbeddedTableViewController: UITableViewController {
         if(eventsNum == 0) {
             if(section == 0) {
                 cell.itemLabel.text = "No Events"
-                cell.startButton.isHidden = true
+                cell.timeLabel.isHidden = true
+                cell.deleteButton.isHidden = true
             }
+        } else {
+            let eventsArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
+            let eventText = eventsArray[row]
+            let startTime = dateManager.defaultter.integer(forKey: "events" + eventText)
+            cell.itemLabel.text = eventsArray[row]
+            cell.timeLabel.text = String(startTime)
         }
         if(scheduleNum == 0) {
             if(section == 1) {
                 cell.itemLabel.text = "No schedule"
-                cell.startButton.isHidden = true
+                cell.timeLabel.isHidden = true
+                cell.deleteButton.isHidden = true
             }
+        } else {
+            let scheduleArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule")!
+            let scheduleText = scheduleArray[row]
+            let duration = dateManager.defaultter.integer(forKey: "schedule" + scheduleText)
+            cell.itemLabel.text = scheduleArray[row]
+            cell.timeLabel.text = String(duration)
         }
+        
+        
         
         // Configure the cell...
 

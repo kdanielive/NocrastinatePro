@@ -12,7 +12,7 @@ class EmbeddedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var itemLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
