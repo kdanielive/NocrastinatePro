@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         calendarView.scrollToDate( Date() )
-        calendarView.selectDates([Date()])
         
         setupCalendarView()
         // Do any additional setup after loading the view, typically from a nib.
@@ -112,8 +111,19 @@ extension ViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
+        
+        //reset background color of cell to clear
         validCell.backgroundColor = UIColor.clear
-        validCell.dateLabel.textColor = UIColor.white
+        
+        // Setting text color back to white or red
+        let today = Date()
+        let cellDate = cellState.date
+        formatter.dateFormat = "yyyy MM dd"
+        if(formatter.string(from: today) == formatter.string(from: cellDate)) {
+            validCell.dateLabel.textColor = UIColor.red
+        } else {
+            validCell.dateLabel.textColor = UIColor.white
+        }
     }
 
 }
