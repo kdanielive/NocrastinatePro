@@ -111,6 +111,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         // store date information
         DateManager.date = date
+        // reloads embeddedtableview
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     

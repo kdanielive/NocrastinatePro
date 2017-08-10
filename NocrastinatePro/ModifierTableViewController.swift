@@ -106,12 +106,22 @@ class ModifierTableViewController: UITableViewController {
         let dateKey = dateManager.dateToString()
         dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
         dateManager.defaultter.set(Int(currentStartTime), forKey: "events" + currentEvent)
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
+        cell.eventTextField.text = ""
+        cell.eventTimeTextField.text = ""
     }
     
     @IBAction func addToSchedule(_ sender: UIButton) {
         let dateKey = dateManager.dateToString()
         dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
         dateManager.defaultter.set(Int(currentDuration), forKey: "schedule" + currentSchedule)
+        
+        let indexPath = IndexPath(row: 0, section: 1)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
+        cell.itemTextField.text = ""
+        cell.itemDurationTextField.text = ""
     }
     
     /*

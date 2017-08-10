@@ -17,6 +17,7 @@ class EmbeddedTableViewController: UITableViewController {
         
         self.tableView.allowsSelection = false
         
+        // for reloading with different dates
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
 
         // Uncomment the following line to preserve selection between presentations
