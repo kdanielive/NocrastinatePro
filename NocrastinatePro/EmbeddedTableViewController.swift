@@ -9,7 +9,9 @@
 import UIKit
 
 class EmbeddedTableViewController: UITableViewController {
-
+    
+    let dateManager = DateManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,28 +26,49 @@ class EmbeddedTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let dateKey = dateManager.dateToString()
+        if section == 0 {
+            if let eventsArray = dateManager.defaultter.array(forKey: dateKey + "events") {
+                return eventsArray.count
+            } else {
+                return 1
+            }
+        } else {
+            if let scheduleArray = dateManager.defaultter.array(forKey: dateKey + "schedule") {
+                return scheduleArray.count
+            } else {
+                return 1
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Events"
+        } else {
+            return "Schedule"
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "embeddedCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

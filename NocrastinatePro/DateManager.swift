@@ -11,6 +11,9 @@ import Foundation
 class DateManager {
     
     let formatter = DateFormatter()
+    let defaultter = UserDefaults()
+    // In NSUserDefault, several information will be stored:
+    //  1. Array For String
     
     static var date = Date()
     
