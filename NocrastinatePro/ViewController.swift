@@ -111,6 +111,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         // store date information
         DateManager.date = date
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
