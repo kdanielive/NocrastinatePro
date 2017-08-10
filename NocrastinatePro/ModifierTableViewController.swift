@@ -10,10 +10,9 @@ import UIKit
 
 class ModifierTableViewController: UITableViewController {
     
-    @IBOutlet weak var doneButton: UIButton!
-    var eventDict = [Int:String]()
-    var scheduleDict = [Int:String]()
-    var durationDict = [Int:String]()
+    var eventArray  = <String>()
+    var scheduleArray = <String>()
+    var durationDict = [String:Int]()
     let dateManager = DateManager()
 
     override func viewDidLoad() {
@@ -43,9 +42,9 @@ class ModifierTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if(section == 0) {
-            return 5
+            return 1
         } else {
-            return 5
+            return 1
         }
     }
 
@@ -71,6 +70,13 @@ class ModifierTableViewController: UITableViewController {
         // Configure the cell...
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Events"
+        } else {
+            return "Schedule"
+        }
+    }
     
     func addEventToArray(_ sender: UITextField) {
         let event = sender.text
@@ -88,16 +94,6 @@ class ModifierTableViewController: UITableViewController {
         let duration = sender.text
         let row = sender.tag
         durationDict[row] = duration
-    }
-
-    @IBAction func donePressed(_ sender: UIButton) {
-        let dateKey = dateManager.dateToString()
-        let eventArray = Array(eventDict.values)
-        let scheduleArray = Array(scheduleDict.values)
-        let durationArray = Array(durationDict.values)
-        
-        dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
-        dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
     }
     
     /*

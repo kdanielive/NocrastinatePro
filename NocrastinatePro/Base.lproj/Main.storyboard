@@ -13,7 +13,7 @@
         <!--Ib Calendar Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NocrastinatePro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -149,7 +149,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Add Event/Schedule"/>
                                 <connections>
-                                    <segue destination="VmG-3s-g3a" kind="popoverPresentation" popoverAnchorView="zoY-fC-fnm" id="Ujh-AD-7L4">
+                                    <segue destination="VmG-3s-g3a" kind="popoverPresentation" popoverAnchorView="zoY-fC-fnm" id="VPK-13-qkx">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="139.880059970015"/>
         </scene>
-        <!--Modifier Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="dfT-R5-yNX">
             <objects>
-                <viewController id="VmG-3s-g3a" customClass="ModifierTableViewController" customModule="NocrastinatePro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VmG-3s-g3a" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lny-2H-iko"/>
                         <viewControllerLayoutGuide type="bottom" id="gZ7-1n-1Re"/>
@@ -204,7 +204,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="donePressed:" destination="VmG-3s-g3a" eventType="touchUpInside" id="MlN-UM-MON"/>
+                                    <action selector="doneButtonPressed:" destination="VmG-3s-g3a" eventType="touchUpInside" id="YKC-T4-CE6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -220,7 +220,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="doneButton" destination="uXX-0s-XMW" id="0ve-jo-eeA"/>
+                        <outlet property="doneButton" destination="uXX-0s-XMW" id="qDI-l7-BC8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELB-wy-wHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,19 +236,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventModifierCell" rowHeight="40" id="MHf-oM-Css" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventModifierCell" rowHeight="80" id="MHf-oM-Css" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHf-oM-Css" id="HYi-xy-xL9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an Event" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-ni-YTH">
-                                            <rect key="frame" x="8" y="4" width="359" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an Event" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-ni-YTH">
+                                            <rect key="frame" x="8" y="8" width="359" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx9-4n-B9C">
+                                            <rect key="frame" x="8" y="46" width="359" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Add Event"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="HYi-xy-xL9" secondAttribute="leadingMargin" id="GNA-eJ-5VA"/>
@@ -261,21 +267,21 @@
                                     <outlet property="eventTextField" destination="uTZ-ni-YTH" id="EKU-8A-lyv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleModifierCell" rowHeight="40" id="WNq-c8-Twl" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="68" width="375" height="40"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleModifierCell" rowHeight="80" id="WNq-c8-Twl" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WNq-c8-Twl" id="ZwO-dE-ZSB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Schedule Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-WW-Cwg">
-                                            <rect key="frame" x="8" y="4" width="254" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Schedule Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-WW-Cwg">
+                                            <rect key="frame" x="8" y="8" width="254" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Minutes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Ni-KhI">
-                                            <rect key="frame" x="270" y="4" width="97" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Minutes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Ni-KhI">
+                                            <rect key="frame" x="270" y="8" width="97" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="97" id="5de-Ob-ZBN"/>
@@ -284,6 +290,12 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgM-js-53O">
+                                            <rect key="frame" x="8" y="41" width="359" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Add to Schedule"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="yRN-Ni-KhI" firstAttribute="trailing" secondItem="ZwO-dE-ZSB" secondAttribute="trailingMargin" id="0eg-uB-2b7"/>
@@ -325,37 +337,49 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFu-gV-B44" id="9Ih-YJ-D2f">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsq-6c-9fY">
+                                            <rect key="frame" x="8" y="7" width="240" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-7x-k2m">
+                                            <rect key="frame" x="337" y="7" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="COa-Cj-bRI"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="icons8-Delete-64"/>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwD-ym-3zA">
-                                            <rect key="frame" x="294" y="7" width="73" height="30"/>
+                                            <rect key="frame" x="256" y="7" width="73" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="73" id="R8L-oX-Vph"/>
+                                                <constraint firstAttribute="width" constant="73" id="91f-Er-WwV"/>
                                             </constraints>
                                             <state key="normal" title="Start">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsq-6c-9fY">
-                                            <rect key="frame" x="8" y="7" width="278" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="BwD-ym-3zA" firstAttribute="leading" secondItem="Zsq-6c-9fY" secondAttribute="trailing" constant="8" symbolic="YES" id="0p1-H4-HAA"/>
-                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="top" secondItem="BwD-ym-3zA" secondAttribute="top" id="66h-In-rdE"/>
-                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="leading" secondItem="9Ih-YJ-D2f" secondAttribute="leadingMargin" id="cLX-zM-NO8"/>
-                                        <constraint firstItem="BwD-ym-3zA" firstAttribute="trailing" secondItem="9Ih-YJ-D2f" secondAttribute="trailingMargin" id="jqe-sp-ZIU"/>
-                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="centerY" secondItem="9Ih-YJ-D2f" secondAttribute="centerY" id="qNw-B0-CFP"/>
-                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="bottom" secondItem="BwD-ym-3zA" secondAttribute="bottom" id="za1-Bk-vL0"/>
+                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="top" secondItem="BwD-ym-3zA" secondAttribute="top" id="2df-RJ-WU6"/>
+                                        <constraint firstItem="BwD-ym-3zA" firstAttribute="leading" secondItem="Zsq-6c-9fY" secondAttribute="trailing" constant="8" symbolic="YES" id="4st-PF-eXY"/>
+                                        <constraint firstItem="BwD-ym-3zA" firstAttribute="top" secondItem="ywg-7x-k2m" secondAttribute="top" id="5Il-7K-HT4"/>
+                                        <constraint firstItem="BwD-ym-3zA" firstAttribute="bottom" secondItem="ywg-7x-k2m" secondAttribute="bottom" id="F74-OS-xNS"/>
+                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="leading" secondItem="9Ih-YJ-D2f" secondAttribute="leadingMargin" id="WOT-bp-WlG"/>
+                                        <constraint firstItem="ywg-7x-k2m" firstAttribute="trailing" secondItem="9Ih-YJ-D2f" secondAttribute="trailingMargin" id="Zy4-hX-ZGv"/>
+                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="top" secondItem="9Ih-YJ-D2f" secondAttribute="topMargin" constant="-1" id="bPa-sC-iz1"/>
+                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="centerY" secondItem="9Ih-YJ-D2f" secondAttribute="centerY" id="ftm-nP-MXF"/>
+                                        <constraint firstItem="Zsq-6c-9fY" firstAttribute="bottom" secondItem="BwD-ym-3zA" secondAttribute="bottom" id="kAc-0C-2TH"/>
+                                        <constraint firstItem="ywg-7x-k2m" firstAttribute="leading" secondItem="BwD-ym-3zA" secondAttribute="trailing" constant="8" symbolic="YES" id="mLN-2n-Oa6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.23172486110000001" green="0.30142652440000001" blue="0.34963229299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <outlet property="deleteButton" destination="ywg-7x-k2m" id="jFr-Su-c49"/>
                                     <outlet property="itemLabel" destination="Zsq-6c-9fY" id="eqF-sh-s9U"/>
                                     <outlet property="startButton" destination="BwD-ym-3zA" id="e5X-CR-34z"/>
                                 </connections>
@@ -370,7 +394,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsd-R7-pEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="324"/>
+            <point key="canvasLocation" x="-551.20000000000005" y="323.38830584707648"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Delete-64" width="64" height="64"/>
+    </resources>
 </document>
