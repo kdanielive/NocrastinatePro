@@ -230,68 +230,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleModifierCell" rowHeight="73" id="WNq-c8-Twl" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventModifierCell" rowHeight="40" id="MHf-oM-Css" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WNq-c8-Twl" id="ZwO-dE-ZSB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHf-oM-Css" id="HYi-xy-xL9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Schedule Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-WW-Cwg">
-                                            <rect key="frame" x="8" y="6" width="290" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an Event" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-ni-YTH">
+                                            <rect key="frame" x="8" y="4" width="359" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="10D-c0-Pjo">
-                                            <rect key="frame" x="6" y="37" width="363" height="31"/>
-                                        </slider>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-Oa-gWK">
-                                            <rect key="frame" x="306" y="8" width="61" height="28"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="61" id="X6L-L2-XR9"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Q9u-Oa-gWK" firstAttribute="leading" secondItem="YJj-WW-Cwg" secondAttribute="trailing" constant="8" symbolic="YES" id="1jb-MW-yLh"/>
-                                        <constraint firstItem="Q9u-Oa-gWK" firstAttribute="trailing" secondItem="10D-c0-Pjo" secondAttribute="trailing" id="B77-Xc-bVk"/>
-                                        <constraint firstItem="Q9u-Oa-gWK" firstAttribute="trailing" secondItem="ZwO-dE-ZSB" secondAttribute="trailingMargin" id="De4-3L-zua"/>
-                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="leading" secondItem="10D-c0-Pjo" secondAttribute="leading" id="Dt5-zz-B2V"/>
-                                        <constraint firstItem="Q9u-Oa-gWK" firstAttribute="top" secondItem="ZwO-dE-ZSB" secondAttribute="topMargin" id="bRR-EN-Rdz"/>
-                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="bottom" secondItem="Q9u-Oa-gWK" secondAttribute="bottom" id="bwI-Xy-v7l"/>
-                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="leading" secondItem="ZwO-dE-ZSB" secondAttribute="leadingMargin" id="flp-ua-ZNw"/>
-                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="top" secondItem="ZwO-dE-ZSB" secondAttribute="topMargin" constant="-2" id="gpy-bm-ZXa"/>
-                                        <constraint firstItem="10D-c0-Pjo" firstAttribute="top" secondItem="YJj-WW-Cwg" secondAttribute="bottom" constant="1" id="ouP-8z-wEK"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="leading" secondItem="HYi-xy-xL9" secondAttribute="leadingMargin" id="GNA-eJ-5VA"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="trailing" secondItem="HYi-xy-xL9" secondAttribute="trailingMargin" id="OW8-kV-vKV"/>
+                                        <constraint firstItem="uTZ-ni-YTH" firstAttribute="centerY" secondItem="HYi-xy-xL9" secondAttribute="centerY" id="qXU-vh-boe"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.23172486110000001" green="0.30142652440000001" blue="0.34963229299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <outlet property="itemDurationLabel" destination="Q9u-Oa-gWK" id="TcZ-d4-G4p"/>
-                                    <outlet property="itemDurationSlider" destination="10D-c0-Pjo" id="6Au-OT-Xvh"/>
-                                    <outlet property="itemTextField" destination="YJj-WW-Cwg" id="AL7-Rp-bww"/>
+                                    <outlet property="eventTextField" destination="uTZ-ni-YTH" id="EKU-8A-lyv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventModifierCell" rowHeight="36" id="MHf-oM-Css" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101" width="375" height="36"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleModifierCell" rowHeight="40" id="WNq-c8-Twl" customClass="ModifierTableViewCell" customModule="NocrastinatePro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHf-oM-Css" id="HYi-xy-xL9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WNq-c8-Twl" id="ZwO-dE-ZSB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an Event" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-ni-YTH">
-                                            <rect key="frame" x="8" y="2" width="359" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Schedule Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-WW-Cwg">
+                                            <rect key="frame" x="8" y="4" width="254" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Minutes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Ni-KhI">
+                                            <rect key="frame" x="270" y="4" width="97" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="5de-Ob-ZBN"/>
+                                            </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yRN-Ni-KhI" firstAttribute="trailing" secondItem="ZwO-dE-ZSB" secondAttribute="trailingMargin" id="0eg-uB-2b7"/>
+                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="leading" secondItem="ZwO-dE-ZSB" secondAttribute="leadingMargin" id="4Az-r3-40T"/>
+                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="top" secondItem="yRN-Ni-KhI" secondAttribute="top" id="4HV-Vy-cDP"/>
+                                        <constraint firstItem="yRN-Ni-KhI" firstAttribute="leading" secondItem="YJj-WW-Cwg" secondAttribute="trailing" constant="8" symbolic="YES" id="Cxa-sx-ab0"/>
+                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="bottom" secondItem="yRN-Ni-KhI" secondAttribute="bottom" id="cID-ko-dDu"/>
+                                        <constraint firstItem="YJj-WW-Cwg" firstAttribute="centerY" secondItem="ZwO-dE-ZSB" secondAttribute="centerY" id="wor-X4-8oT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.23172486110000001" green="0.30142652440000001" blue="0.34963229299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="itemDurationTextField" destination="yRN-Ni-KhI" id="win-xi-I4v"/>
+                                    <outlet property="itemTextField" destination="YJj-WW-Cwg" id="AL7-Rp-bww"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -11,8 +11,8 @@ import UIKit
 class ModifierTableViewCell: UITableViewCell {
     
     @IBOutlet weak var itemTextField: UITextField!
-    @IBOutlet weak var itemDurationLabel: UILabel!
-    @IBOutlet weak var itemDurationSlider: UISlider!
+    @IBOutlet weak var itemDurationTextField: UITextField!
+    @IBOutlet weak var eventTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
