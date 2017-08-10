@@ -93,6 +93,22 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         cell.dateLabel.text = cellState.text
         
+        // To rid of the reused cell coloring problem
+        if cellState.isSelected {
+            cell.backgroundColor = UIColor.cyan
+            cell.dateLabel.textColor = UIColor.gray
+        } else {
+            cell.backgroundColor = UIColor.clear
+            let today = Date()
+            let cellDate = cellState.date
+            formatter.dateFormat = "yyyy MM dd"
+            if(formatter.string(from: today) == formatter.string(from: cellDate)) {
+                cell.dateLabel.textColor = UIColor.red
+            } else {
+                cell.dateLabel.textColor = UIColor.white
+            }
+        }
+        
         handleCellTextColor(view: cell, cellState: cellState)
         
         return cell

@@ -98,6 +98,8 @@ class EmbeddedTableViewController: UITableViewController {
                 cell.timeLabel.isHidden = true
                 cell.deleteButton.isHidden = true
             } else {
+                cell.timeLabel.isHidden = false
+                cell.deleteButton.isHidden = false
                 let eventsArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
                 let eventText = eventsArray[row]
                 if let startTime = dateManager.defaultter.string(forKey: "events" + eventText) {
@@ -114,6 +116,8 @@ class EmbeddedTableViewController: UITableViewController {
                 cell.timeLabel.isHidden = true
                 cell.deleteButton.isHidden = true
             } else {
+                cell.itemLabel.isHidden = false
+                cell.timeLabel.isHidden = false
                 let scheduleArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule")!
                 let scheduleText = scheduleArray[row]
                 let duration = dateManager.defaultter.integer(forKey: "schedule" + scheduleText)
