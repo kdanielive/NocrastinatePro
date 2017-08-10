@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="139.880059970015"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Embedded Table View Controller-->
         <scene sceneID="Bia-wI-BAz">
             <objects>
-                <tableViewController id="zTq-EX-gnR" sceneMemberID="viewController">
+                <tableViewController id="zTq-EX-gnR" customClass="EmbeddedTableViewController" customModule="NocrastinatePro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="s6u-Eb-YIY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +180,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="zTq-EX-gnR" id="wNK-dT-WJb"/>
                             <outlet property="delegate" destination="zTq-EX-gnR" id="2nK-xw-pW9"/>

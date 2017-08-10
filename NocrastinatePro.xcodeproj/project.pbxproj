@@ -16,6 +16,7 @@
 		733A16BB1F399DFF001C913E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733A16B91F399DFF001C913E /* LaunchScreen.storyboard */; };
 		733A16C61F399DFF001C913E /* NocrastinateProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A16C51F399DFF001C913E /* NocrastinateProTests.swift */; };
 		733A16D11F399DFF001C913E /* NocrastinateProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A16D01F399DFF001C913E /* NocrastinateProUITests.swift */; };
+		737A168F1F3BFE7D0050D9F7 /* EmbeddedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A168E1F3BFE7D0050D9F7 /* EmbeddedTableViewController.swift */; };
 		86F479C5C21DB3D696A6B387 /* Pods_NocrastinatePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2748630C53121E97EA9D6F1F /* Pods_NocrastinatePro.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		733A16CC1F399DFF001C913E /* NocrastinateProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NocrastinateProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		733A16D01F399DFF001C913E /* NocrastinateProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NocrastinateProUITests.swift; sourceTree = "<group>"; };
 		733A16D21F399DFF001C913E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737A168E1F3BFE7D0050D9F7 /* EmbeddedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedTableViewController.swift; sourceTree = "<group>"; };
 		85974F3D64DA1F0F25D2E0A5 /* Pods-NocrastinatePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NocrastinatePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NocrastinatePro/Pods-NocrastinatePro.debug.xcconfig"; sourceTree = "<group>"; };
 		BBC103EC0EE133AAA5C5FAF3 /* Pods-NocrastinatePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NocrastinatePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-NocrastinatePro/Pods-NocrastinatePro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,8 +120,9 @@
 			children = (
 				733A16AD1F399DFF001C913E /* AppDelegate.swift */,
 				733A16AF1F399DFF001C913E /* ViewController.swift */,
-				733A16B11F399DFF001C913E /* Main.storyboard */,
 				732628511F39A31100ADA745 /* CustomCell.swift */,
+				733A16B11F399DFF001C913E /* Main.storyboard */,
+				737A168E1F3BFE7D0050D9F7 /* EmbeddedTableViewController.swift */,
 				733A16B71F399DFF001C913E /* Assets.xcassets */,
 				733A16B91F399DFF001C913E /* LaunchScreen.storyboard */,
 				733A16BC1F399DFF001C913E /* Info.plist */,
@@ -347,6 +350,7 @@
 				733A16B01F399DFF001C913E /* ViewController.swift in Sources */,
 				732628521F39A31100ADA745 /* CustomCell.swift in Sources */,
 				733A16AE1F399DFF001C913E /* AppDelegate.swift in Sources */,
+				737A168F1F3BFE7D0050D9F7 /* EmbeddedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
