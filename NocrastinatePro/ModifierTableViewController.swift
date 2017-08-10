@@ -129,7 +129,7 @@ class ModifierTableViewController: UITableViewController {
             dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
         } else {
             let scheduleArray = [currentEvent]
-            dateManager.defaultter.set(scheduleArray, forKey: dateKey + "events")
+            dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
         }
         dateManager.defaultter.set(Int(currentDuration), forKey: "schedule" + currentSchedule)
         

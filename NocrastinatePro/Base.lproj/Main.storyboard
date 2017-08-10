@@ -370,6 +370,9 @@
                                             <rect key="frame" x="337" y="8" width="30" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="icons8-Delete-64"/>
+                                            <connections>
+                                                <action selector="deleteItem:" destination="zTq-EX-gnR" eventType="touchUpInside" id="DyP-lA-sdh"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="characterWrap" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXY-DU-MjM">
                                             <rect key="frame" x="229" y="6" width="100" height="29"/>

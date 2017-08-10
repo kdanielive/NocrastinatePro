@@ -122,12 +122,31 @@ class EmbeddedTableViewController: UITableViewController {
             }
         }
         
-        
+        cell.deleteButton.tag = row
         // Configure the cell...
 
         return cell
     }
     
+    @IBAction func deleteItem(_ sender: UIButton) {
+        let buttonPosition:CGPoint = sender.convert(CGPointFromString("0,0"), to:self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)!
+        let row = indexPath.row
+        let section = indexPath.section
+        let dateKey = dateManager.dateToString()
+        
+        if(section == 0) {
+            var previousArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
+            previousArray.remove(at: row)
+            dateManager.defaultter.set(previousArray, forKey: dateKey + "events")
+        } else {
+            var previousArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule")!
+            previousArray.remove(at: row)
+            dateManager.defaultter.set(previousArray, forKey: dateKey + "schedule")
+        }
+        
+        self.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
