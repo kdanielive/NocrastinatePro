@@ -14,10 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var year: UILabel!
-
-
     
     let formatter = DateFormatter()
+    let dateManager = DateManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +104,13 @@ extension ViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
+        
+        // configure cell color
         validCell.backgroundColor = UIColor.cyan
         validCell.dateLabel.textColor = UIColor.gray
+        
+        // store date information
+        DateManager.date = date
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
