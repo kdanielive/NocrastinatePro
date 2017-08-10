@@ -10,9 +10,13 @@ import UIKit
 
 class ModifierTableViewController: UITableViewController {
     
-    var eventArray  = <String>()
-    var scheduleArray = <String>()
+    var eventArray  = Array<String>()
+    var scheduleArray = Array<String>()
     var durationDict = [String:Int]()
+    var currentEvent = ""
+    var currentSchedule = ""
+    var currentDuration = ""
+    var currentStartTime = ""
     let dateManager = DateManager()
 
     override func viewDidLoad() {
@@ -50,19 +54,16 @@ class ModifierTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // setting variables and constants
-        let row = indexPath.row
         let section = indexPath.section
         
         // dividing cases
         if(section == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
-            cell.eventTextField.tag = row
             cell.eventTextField.addTarget(self, action: #selector(addEventToArray(_:)), for: UIControlEvents.editingDidEnd)
+            cell.eventTimeTextField.addTarget(self, action: #selector(addStartTimeToArray(_:)), for: UIControlEvents.editingDidEnd)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
-            cell.itemTextField.tag = row
-            cell.itemDurationTextField.tag = row
             cell.itemTextField.addTarget(self, action: #selector(addScheduleToArray(_:)), for: .editingDidEnd)
             cell.itemDurationTextField.addTarget(self, action: #selector(addDurationToArray(_:)), for: .editingDidEnd)
             return cell
@@ -79,21 +80,37 @@ class ModifierTableViewController: UITableViewController {
     }
     
     func addEventToArray(_ sender: UITextField) {
-        let event = sender.text
-        let row = sender.tag
-        
+        let event = sender.text!
+        eventArray.append(event)
+        currentEvent = event
     }
     
     func addScheduleToArray(_ sender: UITextField) {
-        let schedule = sender.text
-        let row = sender.tag
-        scheduleDict[row] = schedule
+        let schedule = sender.text!
+        scheduleArray.append(schedule)
+        currentSchedule = schedule
     }
     
     func addDurationToArray(_ sender: UITextField) {
-        let duration = sender.text
-        let row = sender.tag
-        durationDict[row] = duration
+        let duration = sender.text!
+        currentDuration = duration
+    }
+    
+    func addStartTimeToArray(_ sender: UITextField) {
+        let startTime = sender.text!
+        currentStartTime = startTime
+    }
+    
+    @IBAction func addEvent(_ sender: UIButton) {
+        let dateKey = dateManager.dateToString()
+        dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
+        dateManager.defaultter.set(Int(currentStartTime), forKey: "events" + currentEvent)
+    }
+    
+    @IBAction func addToSchedule(_ sender: UIButton) {
+        let dateKey = dateManager.dateToString()
+        dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
+        dateManager.defaultter.set(Int(currentDuration), forKey: "schedule" + currentSchedule)
     }
     
     /*

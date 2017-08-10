@@ -12,8 +12,9 @@ class DateManager {
     
     let formatter = DateFormatter()
     let defaultter = UserDefaults()
-    // In NSUserDefault, several information will be stored:
-    //  1. Array For String
+    // In NSUserDefault, several information will be stored. The keys are:
+    //  1. [DateKey + events/schedule] to hole value of an array of strings
+    //  2. [events/schedule] + itemName to hold value of integer detailing starting time or duration
     
     static var date = Date()
     
