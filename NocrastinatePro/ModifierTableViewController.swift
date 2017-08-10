@@ -14,6 +14,7 @@ class ModifierTableViewController: UITableViewController {
     var eventDict = [Int:String]()
     var scheduleDict = [Int:String]()
     var durationDict = [Int:String]()
+    let dateManager = DateManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ class ModifierTableViewController: UITableViewController {
         // Configure the cell...
     }
     
+    
     func addEventToArray(_ sender: UITextField) {
         let event = sender.text
         let row = sender.tag
@@ -85,9 +87,19 @@ class ModifierTableViewController: UITableViewController {
     func addDurationToArray(_ sender: UITextField) {
         let duration = sender.text
         let row = sender.tag
-        scheduleDict[row] = duration
+        durationDict[row] = duration
     }
 
+    @IBAction func donePressed(_ sender: UIButton) {
+        let dateKey = dateManager.dateToString()
+        let eventArray = Array(eventDict.values)
+        let scheduleArray = Array(scheduleDict.values)
+        let durationArray = Array(durationDict.values)
+        
+        dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
+        dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -203,6 +203,9 @@
                                 <rect key="frame" x="0.0" y="635" width="375" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="VmG-3s-g3a" eventType="touchUpInside" id="MlN-UM-MON"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
