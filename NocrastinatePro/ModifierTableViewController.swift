@@ -10,9 +10,6 @@ import UIKit
 
 class ModifierTableViewController: UITableViewController {
     
-    var eventArray  = Array<String>()
-    var scheduleArray = Array<String>()
-    var durationDict = [String:Int]()
     var currentEvent = ""
     var currentSchedule = ""
     var currentDuration = ""
@@ -82,13 +79,11 @@ class ModifierTableViewController: UITableViewController {
     
     func addEventToArray(_ sender: UITextField) {
         let event = sender.text!
-        eventArray.append(event)
         currentEvent = event
     }
     
     func addScheduleToArray(_ sender: UITextField) {
         let schedule = sender.text!
-        scheduleArray.append(schedule)
         currentSchedule = schedule
     }
     
@@ -104,27 +99,45 @@ class ModifierTableViewController: UITableViewController {
     
     @IBAction func addEvent(_ sender: UIButton) {
         let dateKey = dateManager.dateToString()
-        dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
+        
+        if let previousArray = dateManager.defaultter.stringArray(forKey: dateKey + "events") {
+            var eventArray = previousArray
+            eventArray.append(currentEvent)
+            dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
+            print("yeah")
+        } else {
+            let eventArray = [currentEvent]
+            dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
+            print("yolo")
+        }
         dateManager.defaultter.set(Int(currentStartTime), forKey: "events" + currentEvent)
         
+        // resetting texts of text fields
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
         cell.eventTextField.text = ""
         cell.eventTimeTextField.text = ""
-        
         self.tableView.reloadData()
     }
     
     @IBAction func addToSchedule(_ sender: UIButton) {
         let dateKey = dateManager.dateToString()
-        dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
+        
+        if let previousArray = dateManager.defaultter.stringArray(forKey: dateKey + "schedule") {
+            var scheduleArray = previousArray
+            scheduleArray.append(currentEvent)
+            dateManager.defaultter.set(scheduleArray, forKey: dateKey + "schedule")
+        } else {
+            let scheduleArray = [currentEvent]
+            dateManager.defaultter.set(scheduleArray, forKey: dateKey + "events")
+        }
         dateManager.defaultter.set(Int(currentDuration), forKey: "schedule" + currentSchedule)
         
+        // resetting texts of text fields
         let indexPath = IndexPath(row: 0, section: 1)
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
         cell.itemTextField.text = ""
         cell.itemDurationTextField.text = ""
-        
         self.tableView.reloadData()
     }
     
