@@ -58,7 +58,7 @@ class ModifierTableViewController: UITableViewController {
         if(section == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "eventModifierCell", for: indexPath) as! ModifierTableViewCell
             cell.eventTextField.addTarget(self, action: #selector(addEventToArray(_:)), for: UIControlEvents.editingDidEnd)
-            cell.eventTimeTextField.addTarget(self, action: #selector(addStartTimeToArray(_:)), for: UIControlEvents.editingDidEnd)
+            cell.eventTimeTextField.addTarget(self, action: #selector(addStartTimeToArray(_:)), for: UIControlEvents.editingDidEndOnExit)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleModifierCell", for: indexPath) as! ModifierTableViewCell
@@ -110,7 +110,7 @@ class ModifierTableViewController: UITableViewController {
             dateManager.defaultter.set(eventArray, forKey: dateKey + "events")
             print("yolo")
         }
-        dateManager.defaultter.set(Int(currentStartTime), forKey: "events" + currentEvent)
+        dateManager.defaultter.set(currentStartTime, forKey: "events" + currentEvent)
         
         // resetting texts of text fields
         let indexPath = IndexPath(row: 0, section: 0)

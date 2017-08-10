@@ -100,9 +100,12 @@ class EmbeddedTableViewController: UITableViewController {
             } else {
                 let eventsArray = dateManager.defaultter.stringArray(forKey: dateKey + "events")!
                 let eventText = eventsArray[row]
-                let startTime = dateManager.defaultter.integer(forKey: "events" + eventText)
+                if let startTime = dateManager.defaultter.string(forKey: "events" + eventText) {
+                    cell.timeLabel.text = startTime
+                } else {
+                    cell.timeLabel.text = "0"
+                }
                 cell.itemLabel.text = eventsArray[row]
-                cell.timeLabel.text = String(startTime)
             }
         }
         if(section == 1) {
