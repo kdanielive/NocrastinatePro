@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         calendarView.scrollToDate( Date() )
+        calendarView.selectDates([Date()])
         
         setupCalendarView()
         // Do any additional setup after loading the view, typically from a nib.
@@ -101,6 +102,18 @@ extension ViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? CustomCell else { return }
+        validCell.backgroundColor = UIColor.cyan
+        validCell.dateLabel.textColor = UIColor.gray
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? CustomCell else { return }
+        validCell.backgroundColor = UIColor.clear
+        validCell.dateLabel.textColor = UIColor.white
     }
 
 }
