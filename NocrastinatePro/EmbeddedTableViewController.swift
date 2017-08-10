@@ -64,8 +64,39 @@ class EmbeddedTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Gets all the necessary variables
         let cell = tableView.dequeueReusableCell(withIdentifier: "embeddedCell", for: indexPath) as! EmbeddedTableViewCell
-
+        let row = indexPath.row
+        let section = indexPath.section
+        let dateKey = dateManager.dateToString()
+        var eventsNum = 0
+        var scheduleNum = 0
+        if let eventsArray = dateManager.defaultter.array(forKey: dateKey + "events") {
+            eventsNum = eventsArray.count
+        } else {
+            eventsNum = 0
+        }
+        if let scheduleArray = dateManager.defaultter.array(forKey: dateKey + "schedule") {
+            scheduleNum = scheduleArray.count
+        } else {
+            scheduleNum = 0
+        }
+        
+        // Sets first row to No events/schedule if there are none
+        if(eventsNum == 0) {
+            if(section == 0) {
+                cell.itemLabel.text = "No Events"
+                cell.startButton.isHidden = true
+            }
+        }
+        if(scheduleNum == 0) {
+            if(section == 1) {
+                cell.itemLabel.text = "No schedule"
+                cell.startButton.isHidden = true
+            }
+        }
+        
+        
         
         // Configure the cell...
 

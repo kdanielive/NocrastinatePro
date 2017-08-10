@@ -11,6 +11,7 @@ import UIKit
 class EmbeddedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
